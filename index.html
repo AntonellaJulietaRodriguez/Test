@@ -1,0 +1,159 @@
+<!-- esto es un comentario, texto de apoyo que no se evalúa como código 
+Lo primero es definir el tipo de documento HTML con el Doctype
+-->
+<!DOCTYPE html>
+
+<!-- el atributo lang define el idioma de nuestro documento, sirve de ayuda a los motores de búsqueda y al browser.
+Un segundo valor indica el país: en-US -->
+
+
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale= 1.0">
+    <link rel="stylesheet" href="./css/style.css">
+    <title>Tab Title</title>
+</head>
+
+<!-- La porción visible al usuario va en el body -->
+
+<body>
+    <!-- headings van del h1 al h6 -->
+    <h1>Título de nivel 1, semánticamente se interpreta como el contenido más importante del documento</h1>
+
+    <h6>Título de nivel 6, se interpreta como el menos importante de su clase, aunque sigue siendo más relevante que
+        un
+        párrafo</h6>
+
+
+    <!-- párrafo -->
+    <p>Esto es un simple párrafo, veremos muchos de ellos en cualquier documento</p>
+
+    <!-- anchor o link, nos provee un elemento que además de un texto descriptivo (o una imagen) tiene una dirección interna o externa a la que viajamos al hacer click (dentro del mismo documento, a otro documento o a otro sitio web)
+    Noten que tiene un atributo href, los atributos proveen info adicional sobre el elemento HTML
+    -->
+    <a href="https://www.wikipedia.org/" target="_blank">Llevame a Wikipedia</a>
+
+
+    <!-- image, esta etiqueta carga un archivo de imagen, indicado con el atributo src (source / origen) -->
+    <!-- ejemplo con archivo local // el atributo "title" genera un tooltip, es decir, al hacer hover con el mouse, muestra el texto indicado-->
+    <img src="./images/pexels-matteo-basile-12419380.jpg" alt="plano nadir techo vitral" height="200"
+        title="la casa de Felipe 'esto se llama tooltip' ">
+
+
+    <!-- ejemplo con el mismo archivo en su ubicación original -->
+
+    <img src="https://images.pexels.com/photos/12419380/pexels-photo-12419380.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+        alt="plano nadir techo vitral" width="200">
+
+    <!-- Podemos utilizar una imagen dentro de una etiqueta contenedora <figure> y agregar un pie con <figcaption> -->
+    <figure>
+        <img src="https://images.pexels.com/photos/4862568/pexels-photo-4862568.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+            alt="foto aérea Desierto de Sarasa" width="250">
+    </figure>
+    <figcaption>foto aérea Desierto de Sarasa</figcaption>
+
+    <!-- el atributo style permite estilizar un componente en línea con CSS, su uso SE DESACONSEJA -->
+    style="color:tomato; font-size: 32px; background-color: blanchedalmond; border: 1px solid grey; text-align: center;
+    padding: .5rem 0">
+
+    Párrafo con estilo en línea</p>
+
+    <!-- envolvemos una imagen en un link y vemos que ocurre 😎 -->
+    <a href="https://google.com" target="_blank">
+        <img src="https://images.pexels.com/photos/12419380/pexels-photo-12419380.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+            alt="plano nadir techo vitral" width="50">
+    </a>
+    <p <!-- Dar formato al texto con HTML -->
+
+    <p class="white-on-red"><i>Texto en itálicas. Para: lenguaje técnico, palabras en otro idioma, etc.</i></p>
+    </p>
+    <p><em>Texto con énfasis. Un screen reader leerá esto con una pronunciación más detallada (claro, con énfasis)</em>
+    <p><b>Texto en negritas "bold", no reviste mayor importancia</b></p>
+    <p><strong>Texto relevante, de mayor importancia</strong></p>
+    <p><mark>Texto marcado</mark></p>
+    <p>vamos a poner una parte de este texto <small>con letra más pequeña</small></p>
+    <p>texto tachado: <del>esto no va más</del></p>
+    <p>texto insertado: <ins>esto es insertado</ins></p>
+    <p>Texto <sub>subíndice</sub></p>
+    <p>Fórmula del Bromo: B<sub>r</sub></p>
+    <p>Texto <sup>superíndice</sup></p>
+    <p>Esta línea tiene una nota al pie<sup>*</sup></p>
+
+    <!-- Un div es un elemento sin notación semántica, es decir, sin etiqueta que indique qué tipo de información contiene. Habitualmente se utiliza para dar estilo a los elementos interiores. Pero a partir de la aparición de etiquetas semánticas, div se utiliza mucho menos, pues se reemplaza con sus contrapartes semánticas que sirven como contenedores pero que, además, dan un indicio sobre el tipo de contenido (esto es útil para los robots de búsqueda  o webcrawlers y para los propios navegadores) -->
+    <div style="color:rgb(10, 91, 10); background-color: rgb(192, 156, 156);">
+        <span>este texto solamente ocupa n caracteres</span>
+        <span>Esto se mostrará al lado, si alcanza el espacio</span>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quae, consequuntur maxime magni
+            ratione rem ut
+            voluptatem cum maiores veritatis itaque repellat iure unde voluptatibus quasi, animi id distinctio at
+            nesciunt?</p>
+        <p class="white-on-red">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quae, consequuntur maxime
+            magni ratione rem ut
+            voluptatem cum maiores veritatis itaque repellat iure unde voluptatibus quasi, animi id distinctio at
+            nesciunt?</p>
+        <p id="big-text" class="white-on-red">Lorem ipsum dolor sit amet, consectetur
+            adipisicing elit. Quae,
+            consequuntur maxime magni
+            ratione rem ut
+            voluptatem cum maiores veritatis itaque repellat iure unde voluptatibus quasi, animi id distinctio at
+            nesciunt?</p>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quae, consequuntur maxime magni ratione rem ut
+            voluptatem cum maiores veritatis itaque repellat iure unde voluptatibus quasi, animi id distinctio at
+            nesciunt?</p>
+    </div>
+
+    <!-- renderizado de listas-->
+
+    <!-- ul: unordered list  -->
+    <ul>
+        <li>Item 1</li>
+        <li>Item 2</li>
+        <li>Item 3</li>
+        <li>Item 4</li>
+    </ul>
+
+    <!-- ol: ordered list -->
+    <ol>
+        <li>Item</li>
+        <li>Item</li>
+        <li>Item</li>
+        <li>Item</li>
+    </ol>
+
+    <!-- dl: description list -->
+
+    <dl>
+        <dt>Gato</dt>
+        <dd>El dueño de la casa y de tu vida, hace lo que se le canta. Adorable.</dd>
+        <dt>Perro</dt>
+        <dd>Fiel, abnegado, se merece todo tu cariño.</dd>
+        <dt>Tortuga</dt>
+        <dd>Donatello, Raffael, Michelangelo, Leonardo</dd>
+    </dl>
+
+    <hr>
+    <!-- Un poco de CSS. Seleccionamos un elemento (con un selector) y luego indicamos propiedades y valores para esas propiedades. -->
+
+    <p>texto estilizado con css</p>
+    <hr>
+    <br>
+
+    <!-- Link para navegar a otro documento de nuestra misma web -->
+    <a href="./html/about.html">About</a>
+
+
+
+    <!-- la etiqueta <style> permite indicar estilos css dentro del mismo documento HTML, al igual que los estilos en línea (atributo style) también se desaconseja -->
+    <style>
+        /* p {
+            color: white;
+            background-color: red
+        } */
+    </style>
+
+
+</body>
+
+html
